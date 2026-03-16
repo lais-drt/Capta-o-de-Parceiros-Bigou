@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bigou Delivery - Parceria</title>
+    <meta name="description" content="Seja um restaurante parceiro do Bigou Delivery. Aumente suas vendas e expanda seu negócio nas cidades do interior.">
+    <link rel="icon" href="favicon.png" type="image/png">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-content">
+            <div class="logo">
+                <img src="logo verde png.png" alt="Bigou Delivery" style="height: 36px; width: auto;">
+            </div>
+            <a href="#registration" class="btn btn-primary btn-sm">Seja parceiro</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container hero-container">
+            <div class="hero-text">
+                <h1>Venda mais com o <br><span class="highlight">Bigou Delivery</span></h1>
+                <p>Conectamos seu restaurante a milhares de clientes em sua cidade e ajudamos você a aumentar as vendas com marketing, tecnologia e suporte especializado.</p>
+                <div class="hero-buttons">
+                    <a href="https://wa.me/seunumerodecontato" target="_blank" class="btn btn-primary">Falar com um consultor</a>
+                    <a href="#registration" class="btn btn-outline">Cadastrar meu restaurante</a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <img src="hero.png" alt="Bigou Hero" class="hero-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats" id="stats">
+        <div class="container">
+            <div class="stats-badge">
+                Somos especialistas em cidades do interior
+            </div>
+            
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h2 class="counter" data-target="500000">+0</h2>
+                    <p>usuários cadastrados</p>
+                </div>
+                <div class="stat-item">
+                    <h2 class="counter" data-target="2000">+0</h2>
+                    <p>restaurantes parceiros</p>
+                </div>
+                <div class="stat-item">
+                    <h2 class="counter" data-target="30">+0</h2>
+                    <p>cidades atendidas</p>
+                </div>
+                <div class="stat-item">
+                    <h2 class="non-counter">MG, RJ, SP</h2>
+                    <p>Atuando nos estados</p>
+                </div>
+            </div>
+
+            <div class="stats-action">
+                <button id="open-cities-btn" class="btn btn-text">Saiba em quais cidades atendemos <i class="ph ph-arrow-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cities Modal -->
+    <div id="cities-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Cidades Atendidas</h3>
+                <button id="close-cities-btn" class="close-btn"><i class="ph ph-x"></i></button>
+            </div>
+            <div class="modal-body">
+                <ul class="cities-list">
+                    <li>Abaeté - MG</li>
+                    <li>Além Paraíba - MG</li>
+                    <li>Barão de Cocais - MG</li>
+                    <li>Barroso - MG</li>
+                    <li>Bicas - MG</li>
+                    <li>Bom Jardim - RJ</li>
+                    <li>Bom Jesus do Itabapoana - RJ / Bom Jesus do Norte - ES - RJ</li>
+                    <li>Carandaí - MG</li>
+                    <li>Carangola - MG</li>
+                    <li>Cláudio - MG</li>
+                    <li>Conceição de Macabu - RJ</li>
+                    <li>Cordeiro / Cantagalo - RJ</li>
+                    <li>Divino - MG</li>
+                    <li>Ervália - MG</li>
+                    <li>Espera Feliz - MG</li>
+                    <li>Guaçuí - ES</li>
+                    <li>Jacutinga - MG</li>
+                    <li>Monte Azul Paulista - SP</li>
+                    <li>Monte Santo de Minas - MG</li>
+                    <li>Muriaé - MG</li>
+                    <li>Natividade - RJ</li>
+                    <li>Ouro Fino - MG</li>
+                    <li>Paraopeba / Caetanópolis - MG</li>
+                    <li>Pirajuí - SP</li>
+                    <li>Piraúba - MG</li>
+                    <li>Pitangui - MG</li>
+                    <li>Ponte Nova - MG</li>
+                    <li>Porciúncula - RJ</li>
+                    <li>Raul Soares - MG</li>
+                    <li>Rio Pomba - MG</li>
+                    <li>Santa Bárbara - MG</li>
+                    <li>Santos Dumont - MG</li>
+                    <li>São João Nepomuceno - MG</li>
+                    <li>São José do Vale do Rio Preto - RJ</li>
+                    <li>Silva Jardim - RJ</li>
+                    <li>Tocantins - MG</li>
+                    <li>Ubá - MG</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Partners Section -->
+    <section class="partners">
+        <div class="container">
+            <h4 class="section-subtitle">RESTAURANTES QUE CONFIAM NO BIGOU</h4>
+            <div class="partners-logos">
+                <img src="digao.png" alt="Digão Lanches" class="partner-logo-img">
+                <img src="soleneve.png" alt="Sol e Neve" class="partner-logo-img">
+                <img src="deligeli.png" alt="Deligeli" class="partner-logo-img">
+                <img src="bobs.png" alt="Bob's" class="partner-logo-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits bg-light">
+        <div class="container">
+            <h2 class="section-title">Por que ser um parceiro <br>Bigou?</h2>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="icon-wrapper"><i class="ph ph-trend-up"></i></div>
+                    <h3>Marketing ativo</h3>
+                    <p>Investimos pesado em publicidade para atrair clientes prontos para comprar de você.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="icon-wrapper"><i class="ph ph-shield-check"></i></div>
+                    <h3>Gestor Profissional</h3>
+                    <p>Sistema completo e fácil de usar para gerenciar pedidos, cardápio e entregas.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="icon-wrapper"><i class="ph ph-eye"></i></div>
+                    <h3>Mais Visibilidade</h3>
+                    <p>Sua marca em destaque para milhares de pessoas que já usam o Bigou todos os dias.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="icon-wrapper"><i class="ph ph-currency-circle-dollar"></i></div>
+                    <h3>Consultoria Grátis</h3>
+                    <p>Apoio estratégico para otimizar seu cardápio e aumentar sua margem de lucro.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="icon-wrapper"><i class="ph ph-megaphone"></i></div>
+                    <h3>Campanhas Exclusivas</h3>
+                    <p>Ações promocionais frequentes para girar seu estoque e conquistar novos clientes.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="icon-wrapper"><i class="ph ph-rocket-launch"></i></div>
+                    <h3>Crescimento Acelerado</h3>
+                    <p>Escalabilidade para seu delivery com tecnologia que acompanha seu sucesso.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Audience Section -->
+    <section class="audience">
+        <div class="container audience-container">
+            <div class="audience-content">
+                <h2 class="section-title text-white">O Bigou é perfeito para você que...</h2>
+                <ul class="check-list">
+                    <li><i class="ph-fill ph-check-circle"></i> Quer digitalizar seu restaurante de forma profissional.</li>
+                    <li><i class="ph-fill ph-check-circle"></i> Está cansado de depender apenas do WhatsApp para pedidos.</li>
+                    <li><i class="ph-fill ph-check-circle"></i> Deseja suporte humano e especializado para seu negócio.</li>
+                    <li><i class="ph-fill ph-check-circle"></i> Atua em cidades do interior e quer o melhor app da região.</li>
+                </ul>
+            </div>
+            <div class="audience-image-wrapper">
+                <img src="superhero.png" alt="Bigou Superhero" class="audience-image">
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">Como funciona o <br>cadastro?</h2>
+            <p class="section-description">Em poucos dias seu restaurante estará online.</p>
+            
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>Cadastro</h3>
+                    <p>Preencha o formulário e nossa equipe entrará em contato.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Ativação</h3>
+                    <p>Configuramos seu cardápio e treinamos sua equipe no gestor.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h3>Comece a vender</h3>
+                    <p>Pronto! Seu restaurante já aparece para os clientes da cidade.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pre-Footer CTA -->
+    <section class="pre-footer bg-light">
+        <div class="container text-center">
+            <h2 class="section-title">Pronto para vender mais com o Bigou?</h2>
+            <p class="section-description">Não perca mais tempo. Junte-se a milhares de parceiros de sucesso.</p>
+            <div class="cta-buttons">
+                <a href="https://wa.me/seunumerodecontato" target="_blank" class="btn btn-primary">Falar com um consultor</a>
+                <a href="#registration" class="btn btn-outline bg-white">Cadastrar meu restaurante</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form Section -->
+    <section class="registration" id="registration">
+        <div class="container registration-container">
+            <div class="registration-form-wrapper">
+                <div class="form-header">
+                    <h2>Cadastre seu Restaurante</h2>
+                    <p>Preencha os dados abaixo e entraremos em contato.</p>
+                </div>
+                
+                <form id="partner-form" class="form-body">
+                    
+                    <!-- Dados do Proprietário -->
+                    <div class="form-section">
+                        <h3 class="form-section-title">Dados do Proprietário</h3>
+                        
+                        <div class="form-group">
+                            <label for="ownerName">Nome completo</label>
+                            <input type="text" id="ownerName" name="ownerName" placeholder="Seu nome" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="ownerPhone">Celular (WhatsApp)</label>
+                            <input type="tel" id="ownerPhone" name="ownerPhone" placeholder="(00) 00000-0000" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group half">
+                                <label for="ownerState">Estado</label>
+                                <select id="ownerState" name="ownerState" required>
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="MG">Minas Gerais</option>
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="ES">Espírito Santo</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group half">
+                                <label for="ownerCity">Cidade</label>
+                                <input type="text" id="ownerCity" name="ownerCity" placeholder="Sua cidade" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Dados do Estabelecimento -->
+                    <div class="form-section">
+                        <h3 class="form-section-title">Dados do Restaurante</h3>
+                        
+                        <div class="form-group">
+                            <label for="restaurantName">Nome do Estabelecimento</label>
+                            <input type="text" id="restaurantName" name="restaurantName" placeholder="Ex: Pizzaria do Zé" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="restaurantCategory">Ramo / Tipo de Negócio</label>
+                            <input type="text" id="restaurantCategory" name="restaurantCategory" placeholder="Ex: Pizzaria" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group half">
+                                <label for="restaurantPhone">Telefone do Negócio</label>
+                                <input type="tel" id="restaurantPhone" name="restaurantPhone" placeholder="(00) 0000-0000" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>
+                            </div>
+                            
+                            <div class="form-group half">
+                                <label for="restaurantNumber">Número do Estabelecimento</label>
+                                <input type="text" id="restaurantNumber" name="restaurantNumber" placeholder="Número" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="restaurantAddress">Endereço Completo</label>
+                            <input type="text" id="restaurantAddress" name="restaurantAddress" placeholder="Rua, bairro" required>
+                        </div>
+                    </div>
+                    
+                    <!-- Disclaimer / Consent -->
+                    <div class="form-disclaimer">
+                        <p>Ao confirmar, você reconhece que compreende e aceita as seguintes condições:</p>
+                        <ul>
+                            <li>Que seu estabelecimento é responsável pela entrega dos pedidos recebidos por intermédio do Bigou Delivery;</li>
+                            <li>Que será cobrada uma taxa de 12% sobre o valor de cada pedido recebido pelo Bigou Delivery, incluindo a taxa de entrega;</li>
+                            <li>Que estou ciente que posso receber pedidos de usuários com cupom de desconto, custeado integralmente pelo aplicativo Bigou Delivery.</li>
+                        </ul>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-block">Confirmar cadastro</button>
+                    
+                </form>
+            </div>
+            
+            <div class="registration-footer text-center" style="margin-top: 60px;">
+                <img src="logo png.png" alt="Bigou Delivery Logo Branca" style="height: 48px; margin: 0 auto 20px;">
+                <p style="color: rgba(255,255,255,0.9);">Faça parte da nossa revolução nas cidades do interior.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer bg-light">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="logo verde png.png" alt="Bigou Delivery" class="footer-logo">
+                    <p>O aplicativo de delivery líder nas cidades do interior. Tecnologia e suporte humano para fazer seu negócio crescer de verdade.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Institucional</h4>
+                    <ul>
+                        <li><a href="https://www.bigou.com.br" target="_blank">Site Bigou</a></li>
+                        <li><a href="#" class="open-cities-footer">Nossas Cidades</a></li>
+                        <li><a href="https://www.linktr.ee/bigoudelivery/" target="_blank">Trabalhe Conosco</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Ajuda</h4>
+                    <ul>
+                        <li><a href="https://wa.me/5532988929726" target="_blank">Central de Suporte</a></li>
+                        <li><a href="https://bigou.com.br/termo-uso" target="_blank">Termos de Uso</a></li>
+                        <li><a href="https://bigou.com.br/privacidade" target="_blank">Políticas de Privacidade</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><a href="https://www.instagram.com/bigoudelivery/" target="_blank"><i class="ph ph-instagram-logo"></i> Instagram</a></li>
+                        <li><a href="https://www.facebook.com/bigoudelivery/?locale=pt_BR" target="_blank"><i class="ph ph-facebook-logo"></i> Facebook</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bigou Delivery S.A. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
