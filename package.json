@@ -1,0 +1,15 @@
+{
+  "name": "captacao-de-parceiros-bigou",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:netlify": "npx --yes netlify-cli dev",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "latest"
+  }
+}

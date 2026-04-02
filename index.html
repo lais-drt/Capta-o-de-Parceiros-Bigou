@@ -14,6 +14,24 @@
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <!-- Styles -->
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '9530922873650891');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=9530922873650891&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
 </head>
 <body>
 
@@ -34,7 +52,7 @@
                 <h1>Venda mais com o <br><span class="highlight">Bigou Delivery</span></h1>
                 <p>Conectamos seu restaurante a milhares de clientes em sua cidade e ajudamos você a aumentar as vendas com marketing, tecnologia e suporte especializado.</p>
                 <div class="hero-buttons">
-                    <a href="https://wa.me/seunumerodecontato" target="_blank" class="btn btn-primary">Falar com um consultor</a>
+                    <a href="https://wa.me/seunumerodecontato" target="_blank" class="btn btn-primary" onclick="if(window.fbq) { fbq('track', 'Contact'); }">Falar com um consultor</a>
                     <a href="#registration" class="btn btn-outline">Cadastrar meu restaurante</a>
                 </div>
             </div>
@@ -230,7 +248,7 @@
             <h2 class="section-title">Pronto para vender mais com o Bigou?</h2>
             <p class="section-description">Não perca mais tempo. Junte-se a milhares de parceiros de sucesso.</p>
             <div class="cta-buttons">
-                <a href="https://wa.me/seunumerodecontato" target="_blank" class="btn btn-primary">Falar com um consultor</a>
+                <a href="https://wa.me/seunumerodecontato" target="_blank" class="btn btn-primary" onclick="if(window.fbq) { fbq('track', 'Contact'); }">Falar com um consultor</a>
                 <a href="#registration" class="btn btn-outline bg-white">Cadastrar meu restaurante</a>
             </div>
         </div>
@@ -258,24 +276,22 @@
                         
                         <div class="form-group">
                             <label for="ownerPhone">Celular (WhatsApp)</label>
-                            <input type="tel" id="ownerPhone" name="ownerPhone" placeholder="(00) 00000-0000" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>
+                            <input type="tel" id="ownerPhone" name="ownerPhone" placeholder="(00) 00000-0000" required>
                         </div>
                         
                         <div class="form-row">
                             <div class="form-group half">
                                 <label for="ownerState">Estado</label>
                                 <select id="ownerState" name="ownerState" required>
-                                    <option value="" disabled selected>Selecione</option>
-                                    <option value="MG">Minas Gerais</option>
-                                    <option value="RJ">Rio de Janeiro</option>
-                                    <option value="SP">São Paulo</option>
-                                    <option value="ES">Espírito Santo</option>
+                                    <option value="" selected>Carregando estados...</option>
                                 </select>
                             </div>
                             
                             <div class="form-group half">
                                 <label for="ownerCity">Cidade</label>
-                                <input type="text" id="ownerCity" name="ownerCity" placeholder="Sua cidade" required>
+                                <select id="ownerCity" name="ownerCity" required disabled>
+                                    <option value="" selected>Selecione o estado primeiro</option>
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -294,21 +310,21 @@
                             <input type="text" id="restaurantCategory" name="restaurantCategory" placeholder="Ex: Pizzaria" required>
                         </div>
                         
+
+
                         <div class="form-row">
                             <div class="form-group half">
-                                <label for="restaurantPhone">Telefone do Negócio</label>
-                                <input type="tel" id="restaurantPhone" name="restaurantPhone" placeholder="(00) 0000-0000" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>
+                                <label for="doesDelivery">Faz entrega própria?</label>
+                                <select id="doesDelivery" name="doesDelivery">
+                                    <option value="" selected>Selecione (opcional)</option>
+                                    <option value="Sim">Sim</option>
+                                    <option value="Não">Não</option>
+                                </select>
                             </div>
-                            
                             <div class="form-group half">
-                                <label for="restaurantNumber">Número do Estabelecimento</label>
-                                <input type="text" id="restaurantNumber" name="restaurantNumber" placeholder="Número" oninput="this.value = this.value.replace(/[^0-9]/g, '')" required>
+                                <label for="bestContactTime">Melhor horário para contato</label>
+                                <input type="text" id="bestContactTime" name="bestContactTime" placeholder="Ex: manhã, 14h–18h">
                             </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="restaurantAddress">Endereço Completo</label>
-                            <input type="text" id="restaurantAddress" name="restaurantAddress" placeholder="Rua, bairro" required>
                         </div>
                     </div>
                     
@@ -323,7 +339,7 @@
                     </div>
                     
                     <button type="submit" class="btn btn-primary btn-block">Confirmar cadastro</button>
-                    
+                    <p id="form-feedback" class="form-feedback" role="status" aria-live="polite" hidden></p>
                 </form>
             </div>
             
@@ -373,6 +389,6 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>

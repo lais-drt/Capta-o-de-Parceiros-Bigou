@@ -582,6 +582,30 @@ input:focus, select:focus {
     margin-bottom: 8px;
 }
 
+.form-feedback {
+    margin-top: 20px;
+    margin-bottom: 0;
+    padding: 14px 18px;
+    border-radius: var(--radius-md);
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.form-feedback--success {
+    background-color: var(--primary-light);
+    color: var(--primary-hover);
+    border: 1px solid rgba(38, 181, 115, 0.35);
+}
+
+.form-feedback--error {
+    background-color: #fef2f2;
+    color: #b91c1c;
+    border: 1px solid rgba(185, 28, 28, 0.25);
+    white-space: pre-line;
+}
+
 .registration-footer {
     margin-top: 40px;
     color: rgba(255, 255, 255, 0.9);
